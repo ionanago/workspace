@@ -1,0 +1,128 @@
+package com.ipartek.formacion.uf2216.SINTAXIS;
+import java.util.*;
+public class operacion {
+	
+	public  operacion() {
+		
+	}
+	public static long convinaciones(int grupos, int total){
+		 
+	    }
+
+	 
+	public static boolean esPrimo(int numero){
+		 int contador = 0;
+		for(int I = 1; I <= numero; I++)
+	        {
+	            if((numero % I) == 0)
+	            {
+	                contador++;
+	            }
+	        }
+	 
+	        if(contador <= 2)
+	        {
+	            //System.out.println("El numero es primo");
+	            return true;
+	        }else{
+	            //System.out.println("El numero no es primo");
+	            return false;
+	        }
+	}
+	public static long factorial(int numero, boolean mostar) {
+		if(numero == 1) return numero;
+		else return numero * (factorial(numero - 1, mostar));
+		
+	}
+	public static void fibonacci(int num_factores) {
+	     if(num_factores==1) {
+	    	 System.out.println("El primer elemento de la serie Fibonacci es :");
+	    	 System.out.println(num_factores);
+	    	 
+	     }
+	     else {
+	      System.out.println("Los " + num_factores + " primeros elementos de la serie de Fibonacci son:"); 
+		 	
+	        int fibo1 = 1;
+	        int fibo2 = 1; 
+	        int i =0;
+
+	        System.out.print(fibo1 + " ");
+	        for(i=2;i<=num_factores;i++){
+	             System.out.print(fibo2 + " ");
+	             fibo2 = fibo1 + fibo2;
+	             fibo1 = fibo2 - fibo1;
+	             } System.out.println("");
+	}}
+	public static void mostrarDivisores(int numero) {
+		//System.out.println("Divisores del numero "+numero);
+        for(int i=1;i<=numero;i++){
+         if (numero % i== 0){ // aqui preguntamos por los divisores del numero ingresado
+        	 System.out.print(i+ " ");
+         }
+        }
+        System.out.println("");
+	}
+	public static void mostrarDivisores(int numero, boolean primos) {
+		if(primos != true) { mostrarDivisores(numero);}
+		else {
+			for(int i=1;i<=numero;i++){
+		         if (numero % i== 0){ // aqui preguntamos por los divisores del numero ingresado
+		        	boolean primo = esPrimo(i);
+		          //System.out.print(i+ " ");
+		        	if(primo==true) {System.out.print(i+" ");}
+		         }}}
+		        System.out.println("");
+
+	}
+	public static void mostarPrimos(int num_ini, int num_fin) {
+		
+	}
+	public static long permutaciones(int num_elementos) {
+		
+	}
+	public static double potencia(int base, int potencia) {
+		double resultado =Math.pow(base, potencia);
+		return resultado;
+	}
+	public static long variaciones(int grupos, int total) {
+		
+	}
+
+	
+	
+	
+	public static void main(String[]args) {
+		
+		System.out.println("convinaciones");
+		
+		System.out.println("¿es el numero 4 primo?");
+		System.out.println(esPrimo(4));
+		
+		System.out.println("factorial de 5");
+		System.out.println(factorial(5,true));
+		
+		System.out.println("fibonacci de 6");
+		fibonacci(6);
+		
+		System.out.println("divisores de 12");
+		mostrarDivisores(12);
+		
+		System.out.println("divisores primos de 26");
+		mostrarDivisores(26, true);
+		
+		System.out.println("primos desde hasta");
+		
+		System.out.println("permutaciones");
+		
+		System.out.println("potencia");
+		System.out.println("3 elevado a 9");
+		System.out.println(potencia(3,9));
+		
+		System.out.println("variaciones");
+		
+		
+		
+	}
+
+}
